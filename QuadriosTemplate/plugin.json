@@ -1,0 +1,17 @@
+{
+    "name"               :"QuadriosTemplate",
+    "description"        :"Quadrios Template theme customization",
+    "namespace"          :"QuadriosTemplate",
+    "author"             :"Vladimir",
+    "type"               :"template",
+    "require"            : [],
+    "serviceProvider"    :"Theme\\Providers\\ThemeServiceProvider",
+    "dataProviders"      :
+    [
+        {
+            "key"        :"Theme\\Containers\\ThemeContainer",
+            "name"       :"Customization theme",
+            "description":"Quadrios Template theme customization"
+        }
+    ]    
+}
