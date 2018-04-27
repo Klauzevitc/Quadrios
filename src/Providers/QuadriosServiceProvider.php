@@ -1,10 +1,10 @@
 <?php
  
-namespace Theme\Providers;
+namespace Quadrios\Providers;
  
 use Plenty\Plugin\ServiceProvider;
  
-class ThemeServiceProvider extends ServiceProvider
+class QuadriosServiceProvider extends ServiceProvider
 {
  
 	/**
