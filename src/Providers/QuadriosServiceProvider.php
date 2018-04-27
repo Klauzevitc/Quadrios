@@ -25,9 +25,9 @@ class QuadriosServiceProvider extends ServiceProvider
 	 */
 	public function boot(Twig $twig, Dispatcher $eventDispatcher)
     {
-        $eventDispatcher->listen('IO.init.templates', function(Partial $partial)
-        {
+        $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
            $partial->set('header', 'Quadrios::content.QuadriosHeader');
+		   $partial->set('footer', 'Quadrios::content.QuadriosFooter');
         }, 0);
         return false;
     }
