@@ -7,8 +7,7 @@ use Plenty\Plugin\Templates\Twig;
 class QuadriosContainer
 {
     public function call(Twig $twig):string
-    {	
-	//test
-        //return $twig->render('Quadrios::content.Quadrios');
+    {		
+        return $twig->render('Quadrios::content.Quadrios');
     }
 }
