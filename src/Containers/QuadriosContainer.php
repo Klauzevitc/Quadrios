@@ -8,6 +8,6 @@ class QuadriosContainer
 {
     public function call(Twig $twig):string
     {		
-        return $twig->render('Quadrios::content.Quadrios');
+        //return $twig->render('Quadrios::content.Quadrios');
     }
 }
