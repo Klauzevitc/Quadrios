@@ -24,7 +24,8 @@ class QuadriosServiceProvider extends ServiceProvider
 	public function register()
 	{
  
-	}	
+	}
+	
 	
 	/**
 	 * Boot a template for the header that will be displayed in the template plugin instead of the original header.
