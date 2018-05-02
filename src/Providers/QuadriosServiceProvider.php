@@ -27,6 +27,7 @@ class QuadriosServiceProvider extends ServiceProvider
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
            $partial->set('header', 'Quadrios::content.QuadriosHeader');
 		   $partial->set('footer', 'Quadrios::content.QuadriosFooter');
+		   $partial->set('page-design', 'Quadrios::content.QuadriosPageDesign');
         }, 0);
         return false;
     }
