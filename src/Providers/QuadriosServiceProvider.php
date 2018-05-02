@@ -1,6 +1,6 @@
 <?php
  
-namespace Theme\Providers;
+namespace Quadrios\Providers;
  
 use IO\Helper\TemplateContainer;
 use IO\Helper\ResourceContainer;
@@ -8,7 +8,7 @@ use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
  
-class ThemeServiceProvider extends ServiceProvider
+class QuadriosServiceProvider extends ServiceProvider
 {
  
 	/**
@@ -27,7 +27,7 @@ class ThemeServiceProvider extends ServiceProvider
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container)
         {
             // The script is imported in the Footer.twig of Ceres
-            $container->addScriptTemplate('Theme::content.SingleItemScript');
+            $container->addScriptTemplate('Quadrios::content.SingleItemScript');
         }, self::PRIORITY);
     }
 }
