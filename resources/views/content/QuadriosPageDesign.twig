@@ -26,7 +26,7 @@
     </head>
 
     <body>
-		<div class="test"></div>
+		
         <script>
             if('ontouchstart' in document.documentElement)
             {
@@ -38,6 +38,8 @@
             }
         </script>
         <div id="vue-app">
+			<div class="test"></div>
+		
             <div class="wrapper wrapper-top">
                 <!-- messages -->
                 <notifications template="#vue-notifications" :initial-notifications="{{ notifications | json_encode() }}"></notifications>
