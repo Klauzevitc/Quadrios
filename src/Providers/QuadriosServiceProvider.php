@@ -43,6 +43,9 @@ class QuadriosServiceProvider extends ServiceProvider
         $eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
             // The script is imported in the Footer.twig of Ceres
             $container->addScriptTemplate('Quadrios::content.QuadriosSingleItemScript');
+			
+			// The style is imported in the <head> on the PageDesign.twig of Ceres
+            $container->addStyleTemplate('Quadrios::content.Quadrios');
         }, self::PRIORITY);
     }
 	
