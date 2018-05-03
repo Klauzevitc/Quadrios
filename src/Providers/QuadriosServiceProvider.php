@@ -39,7 +39,7 @@ class QuadriosServiceProvider extends ServiceProvider{
 			
            //$partial->set('header', 'Quadrios::PageDesign.Partials.QuadriosHeader');
 		   $partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
-		   //$partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
+		   $partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
         }, 0);
 		
 		
