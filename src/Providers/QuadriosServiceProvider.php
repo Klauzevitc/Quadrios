@@ -28,11 +28,11 @@ class QuadriosServiceProvider extends ServiceProvider{
 	 */
 	public function boot(Twig $twig, Dispatcher $eventDispatcher)    {	
 	
-		/*$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
+		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
             $container->addStyleTemplate('Quadrios::content.QuadriosCSS');		
 			
             $container->addScriptTemplate('Quadrios::content.QuadriosScript');
-        }, self::PRIORITY);*/
+        }, 0);
 		
 		
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
