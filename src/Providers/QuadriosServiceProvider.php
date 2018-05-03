@@ -27,21 +27,22 @@ class QuadriosServiceProvider extends ServiceProvider{
 	 * Boot a template for the header that will be displayed in the template plugin instead of the original header.
 	 */
 	public function boot(Twig $twig, Dispatcher $eventDispatcher)    {
-        $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
-			echo "1";
+		
+		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
+            $container->addStyleTemplate('Quadrios::content.QuadriosCSS');		
+			
+            //$container->addScriptTemplate('Quadrios::content.QuadriosScript');
+        }, self::PRIORITY);
+		
+		
+        /*$eventDispatcher->listen('IO.init.templates', function(Partial $partial){
+			
            $partial->set('header', 'Quadrios::PageDesign.Partials.QuadriosHeader');
 		   $partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
 		   $partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
-        }, 0);
+        }, 0);*/
 		
-		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
-			echo "2";
-			// The style is imported in the <head> on the PageDesign.twig of Ceres
-            $container->addStyleTemplate('Quadrios::content.QuadriosCSS');
-			
-			// The script is imported in the Footer.twig of Ceres
-            //$container->addScriptTemplate('Quadrios::content.QuadriosScript');
-        }, self::PRIORITY);
+		
 		
         return false;
     }	
