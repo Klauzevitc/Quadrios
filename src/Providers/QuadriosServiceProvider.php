@@ -39,7 +39,7 @@ class QuadriosServiceProvider extends ServiceProvider{
             $container->addScriptTemplate('Quadrios::content.QuadriosScript');
 			
 			// The style is imported in the <head> on the PageDesign.twig of Ceres
-            $container->addStyleTemplate('Quadrios::content.Quadrios');
+            $container->addStyleTemplate('Quadrios::content.QuadriosCSS');
         }, self::PRIORITY);
 		
 		
