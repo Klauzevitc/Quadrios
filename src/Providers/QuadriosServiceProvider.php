@@ -26,13 +26,29 @@ class QuadriosServiceProvider extends ServiceProvider{
 	/**
 	 * Boot a template for the header that will be displayed in the template plugin instead of the original header.
 	 */
+	public function boot(Twig $twig, Dispatcher $eventDispatcher)    {	
+		
+		
+        $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
+			
+           $partial->set('header', 'Quadrios::PageDesign.Partials.QuadriosHeader');
+		   $partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
+		   $partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
+        }, 0);
+		
+		
+		
+        return false;
+    }	
+	
+	
 	public function boot(Twig $twig, Dispatcher $eventDispatcher)    {
 		
-		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
-            //$container->addStyleTemplate('Quadrios::content.QuadriosCSS');		
+		/*$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
+            $container->addStyleTemplate('Quadrios::content.QuadriosCSS');		
 			
-            //$container->addScriptTemplate('Quadrios::content.QuadriosScript');
-        }, self::PRIORITY);
+            $container->addScriptTemplate('Quadrios::content.QuadriosScript');
+        }, self::PRIORITY);*/
 		
 		
         /*$eventDispatcher->listen('IO.init.templates', function(Partial $partial){
