@@ -31,14 +31,14 @@ class QuadriosServiceProvider extends ServiceProvider{
 		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
             $container->addStyleTemplate('Quadrios::content.QuadriosCSS');		
 			
-            //$container->addScriptTemplate('Quadrios::content.QuadriosScript');
+            $container->addScriptTemplate('Quadrios::content.QuadriosScript');
         }, 0);
 		
 		
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
 			
            //$partial->set('header', 'Quadrios::PageDesign.Partials.QuadriosHeader');
-		   //$partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
+		   $partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
 		   //$partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
         }, 0);
 		
