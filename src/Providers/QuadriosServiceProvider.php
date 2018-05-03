@@ -28,12 +28,14 @@ class QuadriosServiceProvider extends ServiceProvider{
 	 */
 	public function boot(Twig $twig, Dispatcher $eventDispatcher)    {
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
+			echo "1";
            $partial->set('header', 'Quadrios::PageDesign.Partials.QuadriosHeader');
 		   $partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
 		   $partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
         }, 0);
 		
 		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
+			echo "2";
 			// The style is imported in the <head> on the PageDesign.twig of Ceres
             $container->addStyleTemplate('Quadrios::content.QuadriosCSS');
 			
