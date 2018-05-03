@@ -31,7 +31,7 @@ class QuadriosServiceProvider extends ServiceProvider{
 		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
             $container->addStyleTemplate('Quadrios::content.QuadriosCSS');		
 			
-            $container->addScriptTemplate('Quadrios::content.QuadriosScript');
+            //$container->addScriptTemplate('Quadrios::content.QuadriosScript');
         }, 0);
 		
 		
