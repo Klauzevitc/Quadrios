@@ -30,17 +30,17 @@ class QuadriosServiceProvider extends ServiceProvider{
         $eventDispatcher->listen('IO.init.templates', function(Partial $partial){
            $partial->set('header', 'Quadrios::PageDesign.Partials.QuadriosHeader');
 		   $partial->set('footer', 'Quadrios::PageDesign.Partials.QuadriosFooter');
-		   $partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
+		   //$partial->set('page-design', 'Quadrios::PageDesign.QuadriosPageDesign');
         }, 0);
 		
 		
-		$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
+		/*$eventDispatcher->listen('IO.Resources.Import', function (ResourceContainer $container){
             // The script is imported in the Footer.twig of Ceres
             $container->addScriptTemplate('Quadrios::content.QuadriosScript');
 			
 			// The style is imported in the <head> on the PageDesign.twig of Ceres
             $container->addStyleTemplate('Quadrios::content.Quadrios');
-        }, self::PRIORITY);
+        }, self::PRIORITY);*/
 		
 		
         return false;
