@@ -14,16 +14,12 @@ use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;*/
  
-class QuadriosServiceProvider extends ServiceProvider
-{
+class QuadriosServiceProvider extends ServiceProvider{
  
 	/**
 	 * Register the service provider.
 	 */
-	public function register()
-	{
- 
-	}
+	public function register(){}
 	
 	
 	
