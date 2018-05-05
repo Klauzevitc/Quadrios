@@ -57,6 +57,7 @@
                     <li class="list-inline-item control-wish-list">
                         <wish-list-count :init-ids="{{ services.wishList.getItemWishList() | json_encode }}"></wish-list-count>
                     </li>
+					
                 {% endif %}
                 <li class="list-inline-item control-basket">
                     <a v-toggle-basket-preview href="#" class="toggle-basket-preview">
