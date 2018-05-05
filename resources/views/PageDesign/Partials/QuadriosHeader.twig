@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
-                    <li class="list-inline-item control-wish-list hidden">
+                    <li class="list-inline-item control-wish-list">
                         <wish-list-count :init-ids="{{ services.wishList.getItemWishList() | json_encode }}"></wish-list-count>
                     </li>
                 {% endif %}
